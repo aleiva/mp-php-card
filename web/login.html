@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>MP Example</title>
+   </head>
+   <body>
+      <form action="login.php" method="post" name="login" onsubmit="return validate()">
+         <h2>Monto a pagar 20</h2>
+         <h3>Log in to pay!</h3>
+         <div class="column">   
+            <label class="card-label" for="email">
+            <input type="email" id="email" name="email" placeholder="Email" class="card-field"/>
+            </label>
+         </div>
+         <div class="column">
+            <p><input type="submit" value="Next" class="demoSubmit"/></p>
+         </div>
+      </form>
+      <script type="text/javascript">
+
+         function validate() {
+            //Validación sencilla de campo email
+            valor = document.getElementById("email").value;
+
+            if( valor == null || valor.length == 0 ) {
+               alert("Completar campo email");
+               return false;
+            }
+         }             
+      </script>
+   </body>
+</html>
