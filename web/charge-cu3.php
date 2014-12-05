@@ -12,7 +12,6 @@
 
     $body = array();
     $body['amount'] = $amount;
-    $body['installments'] = $installments;
     $body['card'] = $card_token;
 
     //Deberiamos hacer esto opcional

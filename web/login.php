@@ -51,6 +51,8 @@ if ($_POST) {
          $("#pay").submit(function( event ) {
              var $form = $(this);
              Checkout.createToken($form, mpResponseHandler);
+
+             
              event.preventDefault();
              return false;
          });
@@ -61,6 +63,7 @@ if ($_POST) {
              } else {
                  var card_token = response.id;
                  $form.append($('<input type="hidden" id="card_token" name="card_token"/>').val(card_token));
+                 alert(card_token);
                  $form.get(0).submit();
              }   
          }
@@ -69,7 +72,7 @@ if ($_POST) {
       <?php
     }
     else{
-      require_once('./basic-form-mp.html');
+      require_once('./basic-form-mp.php');
     }
 }
 ?>
